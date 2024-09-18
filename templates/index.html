@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Linear Regression Model</title>
+</head>
+<body>
+    <h2>Simple Linear Regression Model</h2>
+    <form action="/predict" method="post">
+        <label for="DELS_Cation">DELS_Cation:</label><br>
+        <input type="text" id="DELS_Cation" name="DELS_Cation"><br><br>
+        
+        <label for="SpMax8_Bh(e)(cation)">SpMax8_Bh(e)(cation):</label><br>
+        <input type="text" id="SpMax8_Bh(e)(cation)" name="SpMax8_Bh(e)(cation)"><br><br>
+
+        <label for="RDF035p(cation)">RDF035p(cation):</label><br>
+        <input type="text" id="RDF035p(cation)" name="RDF035p(cation)"><br><br>
+
+        <label for="Mor05m(cation)">Mor05m(cation):</label><br>
+        <input type="text" id="Mor05m(cation)" name="Mor05m(cation)"><br><br>
+
+        <label for="QXXi(anion)">QXXi(anion):</label><br>
+        <input type="text" id="QXXi(anion)" name="QXXi(anion)"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
